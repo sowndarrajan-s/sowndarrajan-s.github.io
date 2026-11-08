@@ -5,43 +5,123 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Sowndarrajan S — Books</title>
 <meta name="description" content="Books and free study resources by Sowndarrajan S.">
+<meta property="og:title" content="Sowndarrajan S — Books">
+<meta property="og:description" content="Books and free study resources by Sowndarrajan S.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#163A5F">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 64 64%22%3E%3Crect width=%2264%22 height=%2264%22 rx=%2214%22 fill=%22%23163A5F%22/%3E%3Ctext x=%2232%22 y=%2242%22 font-size=%2228%22 text-anchor=%22middle%22 fill=%22white%22 font-family=%22Georgia%22%3ESS%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
-:root { --navy:#163A5F; --teal:#1B8792; --gray:#F1F4F6; --ink:#222222; --bg:#FFFFFF; --muted:#555555;
-        --line:#D5DCE2; --btn-ink:#FFFFFF; }
-@media (prefers-color-scheme: dark) {
-  :root { --navy:#9CC3E8; --teal:#5CC3CC; --gray:#1B2530; --ink:#E6E9EC; --bg:#11171D; --muted:#A9B4BE;
-          --line:#2C3A47; --btn-ink:#11171D; }
+:root {
+  --bg:#F6F8FA; --surface:#FFFFFF; --surface-2:#EEF3F6; --ink:#1C2733; --muted:#5B6B7A; --line:#DCE4EA;
+  --navy:#163A5F; --navy-2:#0F2B47; --teal:#1B8792; --teal-soft:#E3F3F4; --gold:#E2A93B;
+  --shadow:0 1px 2px rgba(16,40,64,.06), 0 8px 24px rgba(16,40,64,.08);
+  --shadow-lift:0 2px 4px rgba(16,40,64,.08), 0 16px 36px rgba(16,40,64,.14);
+  --radius:14px;
 }
-* { box-sizing: border-box; }
-body { margin:0; background:var(--bg); color:var(--ink); font-family: Georgia, "Times New Roman", serif; line-height:1.55; }
-main { max-width: 780px; margin: 0 auto; padding: 28px 16px 48px; }
-nav { font-size:.95rem; margin-bottom:18px; }
-nav a { color:var(--teal); }
-h1 { color:var(--navy); font-size: 1.85rem; margin: 0 0 4px; line-height:1.25; }
-h2 { color:var(--navy); font-size: 1.3rem; margin: 26px 0 10px; }
-.sub { color:var(--teal); font-weight:bold; margin:0 0 4px; }
-.by { color:var(--muted); margin:0 0 20px; }
-.card { background:var(--gray); border-left:4px solid var(--teal); padding:14px 16px; margin:0 0 12px; }
-.card h3 { margin:0 0 4px; font-size:1.12rem; color:var(--navy); }
-.card p { margin:4px 0 0; }
-.meta { color:var(--muted); font-size:.9rem; }
-.actions { display:flex; flex-wrap:wrap; gap:8px; margin-top:10px; }
-.btn { display:inline-block; padding:7px 16px; border-radius:4px; font-weight:bold; text-decoration:none;
-       font-family: Arial, Helvetica, sans-serif; font-size:.92rem; }
-.btn.read { background:var(--navy); color:var(--btn-ink); }
-.btn.down { background:transparent; color:var(--navy); border:2px solid var(--navy); padding:5px 14px; }
-.btn:focus-visible { outline:3px solid var(--teal); outline-offset:2px; }
-footer { margin-top:30px; padding-top:12px; border-top:1px solid var(--line); color:var(--muted); font-size:.9rem; }
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg:#0D141B; --surface:#141E28; --surface-2:#1A2733; --ink:#E7EDF2; --muted:#9AAAB8; --line:#253442;
+    --navy:#8EC1EE; --navy-2:#6FA9DE; --teal:#4CC2CB; --teal-soft:#14333A; --gold:#F0BE5C;
+    --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 24px rgba(0,0,0,.35);
+    --shadow-lift:0 2px 4px rgba(0,0,0,.45), 0 16px 36px rgba(0,0,0,.5);
+  }
+}
+* { box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior:auto; } * { transition:none !important; } }
+body { margin:0; background:var(--bg); color:var(--ink); font-family:"Inter", system-ui, -apple-system, "Segoe UI",
+       Roboto, Arial, sans-serif; line-height:1.6; -webkit-font-smoothing:antialiased; }
+a { color:var(--teal); }
+.wrap { max-width:1060px; margin:0 auto; padding:0 20px; }
+.skip { position:absolute; left:-9999px; } .skip:focus { left:16px; top:12px; background:var(--surface); padding:8px 12px; z-index:9; }
+header.top { position:sticky; top:0; z-index:5; background:color-mix(in srgb, var(--bg) 82%, transparent);
+             backdrop-filter:saturate(1.4) blur(10px); border-bottom:1px solid var(--line); }
+header.top .wrap { display:flex; align-items:center; justify-content:space-between; height:62px; }
+.brand { display:flex; align-items:center; gap:10px; text-decoration:none; color:var(--ink); font-weight:700; }
+.mono { width:34px; height:34px; border-radius:10px; display:grid; place-items:center; color:#fff; font-size:.9rem;
+        background:linear-gradient(135deg,#163A5F,#1B8792); font-family:"Fraunces", Georgia, serif; letter-spacing:.5px; }
+.toplink { color:var(--muted); text-decoration:none; font-size:.93rem; display:inline-flex; gap:6px; align-items:center; }
+.toplink:hover { color:var(--ink); }
+h1, h2, h3 { font-family:"Fraunces", Georgia, "Times New Roman", serif; letter-spacing:-.01em; line-height:1.18; }
+.hero { padding:56px 0 36px; }
+.eyebrow { display:inline-block; font-size:.78rem; font-weight:700; letter-spacing:.12em; text-transform:uppercase;
+           color:var(--teal); background:var(--teal-soft); padding:5px 10px; border-radius:999px; }
+.hero h1 { font-size:clamp(2rem, 4.6vw, 3.1rem); margin:14px 0 10px; color:var(--navy); }
+.lede { font-size:1.12rem; color:var(--muted); max-width:640px; margin:0; }
+.hero-grid { display:grid; grid-template-columns: 250px 1fr; gap:44px; align-items:center; }
+@media (max-width:760px) { .hero-grid { grid-template-columns:1fr; gap:28px; } .cover { margin:0 auto; } }
+.cover { width:220px; aspect-ratio:3/4; border-radius:6px 12px 12px 6px; position:relative; color:#fff;
+         background:linear-gradient(160deg,#1B4F7F 0%,#163A5F 55%,#0E2740 100%);
+         box-shadow:-6px 0 0 #0B1F33 inset, var(--shadow-lift); padding:22px 18px 18px 26px;
+         display:flex; flex-direction:column; transform:perspective(900px) rotateY(-10deg); }
+.cover::after { content:""; position:absolute; inset:auto 18px 70px 26px; height:3px; background:#1B8792; border-radius:2px; }
+.cover .c-top { font-family:"Fraunces", Georgia, serif; font-weight:800; font-size:2rem; line-height:1; }
+.cover .c-mid { margin-top:8px; font-size:.82rem; font-weight:600; letter-spacing:.06em; text-transform:uppercase; color:#BDE6E9; }
+.cover .c-bot { margin-top:auto; font-size:.8rem; color:#D9E4EE; }
+.cover.small { width:150px; padding:16px 12px 12px 18px; transform:none; }
+.cover.small .c-top { font-size:1.4rem; } .cover.small .c-mid { font-size:.66rem; }
+.cover.small::after { inset:auto 12px 50px 18px; }
+.chips { display:flex; flex-wrap:wrap; gap:8px; margin:18px 0 0; padding:0; list-style:none; }
+.chips li { background:var(--surface); border:1px solid var(--line); border-radius:999px; padding:5px 12px;
+            font-size:.86rem; color:var(--ink); font-weight:600; }
+.cta { display:flex; flex-wrap:wrap; gap:10px; margin-top:24px; }
+.btn { display:inline-flex; align-items:center; gap:8px; padding:11px 18px; border-radius:10px; font-weight:700;
+       font-size:.95rem; text-decoration:none; border:1.5px solid transparent; transition:transform .15s, box-shadow .15s, background .15s; }
+.btn .ic { width:18px; height:18px; }
+.btn.primary { background:var(--navy); color:var(--bg); } .btn.primary:hover { transform:translateY(-1px); box-shadow:var(--shadow); }
+.btn.ghost { background:transparent; color:var(--navy); border-color:var(--navy); } .btn.ghost:hover { background:var(--surface-2); }
+.btn.sm { padding:8px 13px; font-size:.88rem; border-radius:9px; }
+.btn:focus-visible, .card a:focus-visible { outline:3px solid var(--teal); outline-offset:2px; }
+section { padding:26px 0; }
+.sec-head { display:flex; align-items:end; justify-content:space-between; gap:16px; margin-bottom:18px; flex-wrap:wrap; }
+.sec-head h2 { font-size:1.65rem; margin:0; color:var(--navy); }
+.sec-head p { margin:4px 0 0; color:var(--muted); }
+.steps { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; }
+@media (max-width:760px) { .steps { grid-template-columns:1fr; } }
+.step { background:var(--surface); border:1px solid var(--line); border-radius:var(--radius); padding:18px; }
+.step b { display:inline-grid; place-items:center; width:28px; height:28px; border-radius:50%; background:var(--teal-soft);
+          color:var(--teal); margin-bottom:8px; }
+.step h3 { margin:0 0 4px; font-size:1.05rem; } .step p { margin:0; color:var(--muted); font-size:.95rem; }
+.grid { display:grid; grid-template-columns:repeat(2,1fr); gap:16px; }
+@media (max-width:760px) { .grid { grid-template-columns:1fr; } }
+.card { background:var(--surface); border:1px solid var(--line); border-radius:var(--radius); padding:20px;
+        box-shadow:var(--shadow); transition:transform .15s, box-shadow .15s; display:flex; flex-direction:column; }
+.card:hover { transform:translateY(-2px); box-shadow:var(--shadow-lift); }
+.card .head { display:flex; gap:14px; align-items:flex-start; }
+.badge { flex:none; width:44px; height:44px; border-radius:12px; display:grid; place-items:center;
+         background:var(--teal-soft); color:var(--teal); }
+.badge .ic { width:22px; height:22px; }
+.card h3 { margin:0; font-size:1.12rem; color:var(--ink); }
+.card p { margin:6px 0 0; color:var(--muted); font-size:.95rem; }
+.meta { font-size:.82rem; color:var(--muted); margin-top:8px; font-weight:600; letter-spacing:.02em; }
+.card .acts { display:flex; gap:8px; margin-top:auto; padding-top:16px; flex-wrap:wrap; }
+.review { background:linear-gradient(135deg,#163A5F,#1B6F86); color:#fff; border-radius:20px; padding:30px;
+          display:grid; grid-template-columns:1fr auto; gap:20px; align-items:center; box-shadow:var(--shadow-lift); }
+@media (max-width:760px) { .review { grid-template-columns:1fr; } }
+.review h2 { margin:6px 0 6px; font-size:1.6rem; color:#fff; }
+.review p { margin:0; color:#D6E6F2; max-width:560px; }
+.stars { display:flex; gap:3px; color:var(--gold); } .stars .ic { width:20px; height:20px; fill:currentColor; }
+.btn.light { background:#fff; color:#163A5F; } .btn.light:hover { transform:translateY(-1px); }
+.bookcard { display:grid; grid-template-columns:auto 1fr; gap:24px; align-items:center; }
+@media (max-width:620px) { .bookcard { grid-template-columns:1fr; } .bookcard .cover { margin:0 auto; } }
+footer { margin-top:30px; border-top:1px solid var(--line); padding:26px 0 40px; color:var(--muted); font-size:.88rem; }
+footer p { margin:4px 0; }
 </style>
 </head>
 <body>
-<main>
-<h1>Sowndarrajan S</h1><p class="sub">Books and Free Study Resources</p><p class="by">Choose a book to read or download its free printable pages.</p><h2>Books</h2><div class="card"><h3>Algebra 1 Final Exam Practice Workbook</h3><p><i>Step-by-Step Examples, Topic-by-Topic Practice, Mixed Reviews, Full-Length Tests, and Detailed Answer Explanations</i></p><p>Free printable bonus pages: test-day reference sheet, study plans, practice-test review map, word problem toolkit, progress tracker, exam checklist, and graph paper.</p><div class="actions"><a class="btn read" href="algebra-1-final-exam-workbook/">Open book page</a></div></div>
-<footer>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top"><div class="wrap">
+<a class="brand" href="./"><span class="mono">SS</span>Sowndarrajan S</a>
+
+</div></header>
+<main id="main" class="wrap">
+<section class="hero"><span class="eyebrow">Books &amp; study resources</span><h1>Sowndarrajan S</h1><p class="lede">Clear, exam-focused workbooks with worked examples, plenty of practice, and free printable pages for every reader.</p></section><section aria-labelledby="books-h"><div class="sec-head"><div><h2 id="books-h">Books</h2><p>Choose a book to open its free printable pages.</p></div></div><article class="card bookcard"><div class="cover small" role="img" aria-label="Cover of Algebra 1 Final Exam Practice Workbook"><div class="c-top">ALGEBRA 1</div><div class="c-mid">Final Exam Practice Workbook</div><div class="c-bot">Sowndarrajan S</div></div><div><span class="eyebrow">Workbook</span><h3 style="font-size:1.35rem;margin:10px 0 4px">Algebra 1 Final Exam Practice Workbook</h3><p><i>Step-by-Step Examples, Topic-by-Topic Practice, Mixed Reviews, Full-Length Tests, and Detailed Answer Explanations</i></p><p>Twenty chapters of clear explanations and worked examples, a diagnostic test, four full-length practice exams, and complete step-by-step solutions.</p><ul class="chips"><li>308 pages</li><li>660 questions</li><li>4 practice exams</li></ul><div class="acts"><a class="btn primary" href="algebra-1-final-exam-workbook/">Open free bonus pages <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></div></article></section>
+</main>
+<footer><div class="wrap">
 <p>&copy; 2026 Sowndarrajan S. All rights reserved. Personal and single-classroom printing is permitted.</p>
 <p>These books are independent study resources. They are not affiliated with or endorsed by any school,
 examination board, or education department.</p>
-</footer>
-</main>
+</div></footer>
 </body>
 </html>
