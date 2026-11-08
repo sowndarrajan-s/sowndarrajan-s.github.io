@@ -41,7 +41,7 @@ header.top .wrap { display:flex; align-items:center; justify-content:space-betwe
 .brand { display:flex; align-items:center; gap:10px; text-decoration:none; color:var(--ink); font-weight:700; }
 .mono { width:34px; height:34px; border-radius:10px; display:grid; place-items:center; color:#fff; font-size:.9rem;
         background:linear-gradient(135deg,#163A5F,#1B8792); font-family:"Fraunces", Georgia, serif; letter-spacing:.5px; }
-.toplink { color:var(--muted); text-decoration:none; font-size:.93rem; display:inline-flex; gap:6px; align-items:center; }
+.toplink { color:var(--muted); text-decoration:none; font-size:.93rem; display:inline-flex; gap:6px; align-items:center; white-space:nowrap; }
 .toplink:hover { color:var(--ink); }
 h1, h2, h3 { font-family:"Fraunces", Georgia, "Times New Roman", serif; letter-spacing:-.01em; line-height:1.18; }
 .hero { padding:56px 0 36px; }
@@ -56,11 +56,11 @@ h1, h2, h3 { font-family:"Fraunces", Georgia, "Times New Roman", serif; letter-s
          box-shadow:-6px 0 0 #0B1F33 inset, var(--shadow-lift); padding:22px 18px 18px 26px;
          display:flex; flex-direction:column; transform:perspective(900px) rotateY(-10deg); }
 .cover::after { content:""; position:absolute; inset:auto 18px 70px 26px; height:3px; background:#1B8792; border-radius:2px; }
-.cover .c-top { font-family:"Fraunces", Georgia, serif; font-weight:800; font-size:2rem; line-height:1; }
+.cover .c-top { font-family:"Fraunces", Georgia, serif; font-weight:800; font-size:1.7rem; line-height:1; white-space:nowrap; }
 .cover .c-mid { margin-top:8px; font-size:.82rem; font-weight:600; letter-spacing:.06em; text-transform:uppercase; color:#BDE6E9; }
 .cover .c-bot { margin-top:auto; font-size:.8rem; color:#D9E4EE; }
 .cover.small { width:150px; padding:16px 12px 12px 18px; transform:none; }
-.cover.small .c-top { font-size:1.4rem; } .cover.small .c-mid { font-size:.66rem; }
+.cover.small .c-top { font-size:1.12rem; } .cover.small .c-mid { font-size:.66rem; }
 .cover.small::after { inset:auto 12px 50px 18px; }
 .chips { display:flex; flex-wrap:wrap; gap:8px; margin:18px 0 0; padding:0; list-style:none; }
 .chips li { background:var(--surface); border:1px solid var(--line); border-radius:999px; padding:5px 12px;
